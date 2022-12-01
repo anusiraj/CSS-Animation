@@ -1,0 +1,77 @@
+body {
+    margin: 0;
+    padding: 10em;
+}
+div {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(87, 181, 191);
+    animation: clrtransform 1s alternate infinite; 
+}
+#righthand {
+    animation: rightmove 1s alternate ease-in-out infinite;
+    transform-origin: center;
+}
+#leftarm {
+    animation: leftarmmove 1s alternate-reverse ease-in-out infinite;
+    transform-origin: center;
+}
+#rightleg, #leftleg {
+    animation: legs 1s alternate ease-in-out infinite;
+    transform-origin: center;
+    transform-box: fill-box;
+} 
+#music1, #music2, #music3, #eclipse{
+    animation: musicmove 1s ease-in-out alternate infinite;
+    transform-origin: center;
+    transform-box: fill-box;
+}  
+#lady {
+    animation: lady 1s ease-in-out infinite alternate-reverse;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+#ladyhead {
+    animation: ladyhead 1s ease-in-out infinite alternate-reverse;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@keyframes clrtransform {
+    from {background-color: rgb(87, 181, 191);}
+    to {background-color: yellow;}
+}
+@keyframes rightmove {
+    from {transform: rotateX(0deg);}
+    to {transform: rotateX(15deg);}
+}    
+@keyframes leftarmmove {
+    from {transform: rotateX(0deg);}
+    to {transform: rotateX(20deg);}
+} 
+@keyframes legs {
+    from {transform: rotateY(0deg);}
+    to {transform: rotateY(-70deg);}
+}
+@keyframes musicmove {
+    from {transform: translateX(0%) rotateZ(-60deg);}
+    to {transform: translateX(100%) rotateZ(60deg);}
+}
+@keyframes lady {
+    from {transform: translateX(0%);}
+    to {transform: translateX(20%);}
+}
+@keyframes ladyhead {
+    from {transform: translateY(0%) rotateZ(30deg);}
+    to {transform: translateY(20%) rotateZ(-30deg);}
+}
+
+
+
+
+
+
+
+
+
